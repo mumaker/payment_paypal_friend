@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="payment_acquirer_paypal_friend" model="payment.acquirer">
+            <field name="name">Paypal as a Friend</field>
+            <field name="image" type="base64" file="payment_paypal_friend/static/description/icon.png"/>
+            <field name="provider">paypal_friend</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="transfer_acquirer_button"/>
+            <field name="auto_confirm">none</field>
+            <field name="environment">test</field>
+            <field name="website_published" eval="True"/>
+            <field name="pre_msg"><![CDATA[
+<p> 
+    <div>
+        <br>
+        You will not be charged a 3.5% fee for the "buyer protectionservice".
+        <br><br>
+        Paypal details will be provided after clicking the Pay Now button
+    </div>
+</p>]]>
+            </field>
+            <field name="post_msg"><![CDATA[
+<p>
+  <div>
+    <h3>Please use the following transfer details</h3><br>
+    <h4>payment@zynthian.org </h4>
+    (please, send the money as a friend/donation to avoid the fee)<br><br>
+    <h4>Communication</h4>
+    Please use the order name as communication reference.
+   </div>
+</p>]]>
+            </field>
+            <field name="pending_msg"><![CDATA[
+<p>
+  <i>Pending</i>, Your order is not validated yet, when we receive the payment we will proceed to send.
+</p>]]>
+            </field>
+
+        </record>
+
+    </data>
+</openerp>
