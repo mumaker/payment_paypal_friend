@@ -9,27 +9,27 @@
             <field name="company_id" ref="base.main_company"/>
             <field name="view_template_id" ref="transfer_acquirer_button"/>
             <field name="auto_confirm">none</field>
-            <field name="environment">test</field>
+            <field name="environment">prod</field>
             <field name="website_published" eval="True"/>
             <field name="pre_msg"><![CDATA[
 <p> 
     <div>
         <br>
-        You will not be charged a 3.5% fee for the "buyer protectionservice".
+        Send the money as a friend/dontion and avoid the paypal fee for the <i>buyer protection service</i>.
         <br><br>
-        Paypal details will be provided after clicking the Pay Now button
+        Payment details will be provided after clicking the <i>Pay Now</i> button.
     </div>
 </p>]]>
             </field>
             <field name="post_msg"><![CDATA[
 <p>
   <div>
-    <h3>Please use the following transfer details</h3><br>
-    <h4>payment@zynthian.org </h4>
-    (please, send the money as a friend/donation to avoid the fee)<br><br>
-    <h4>Communication</h4>
-    Please use the order name as communication reference.
-   </div>
+    <h4>Please, send the money as a friend/donation to this Paypal account:</h4>
+    <br>
+    <h3>payment@zynthian.org </h3>
+    <br>
+    <h4>and specify the order ID in the notes field.</h4>
+  </div>
 </p>]]>
             </field>
             <field name="pending_msg"><![CDATA[
