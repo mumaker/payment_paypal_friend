@@ -9,7 +9,7 @@
     'description': """Paypal as a Friend Payment Acquirer
     20191010 - It includes changing status in transaction payment when quotation is confirm manually
     """,
-    'website': 'https://github.com/mumaker',
+    'website': 'https://github.com/vandekul',
     'depends': ['payment', 'sale'],
     'data': [
         'views/paypal_friend.xml',

@@ -26,12 +26,12 @@ class PaypalFriendPaymentAcquirer(osv.Model):
         company_id = self.pool['res.users'].browse(cr, uid, uid, context=context).company_id.id
         # filter only bank accounts marked as visible
         post_msg = _('''<div>
-<h3>Please use the following transfer details</h3>
-<h4>payment@zynthian.org</h4>
-(please, send the money as a friend/donation to avoid the fee)<br><br>
-<h4>Communication</h4>
-<p>Please use the order name as communication reference.</p>
-</div>''') 
+            <h3>Please use the following transfer details</h3>
+            <h4>payment@zynthian.org</h4>
+            (please, send the money as a friend/donation to avoid the fee)<br><br>
+            <h4>Communication</h4>
+            <p>Please use the order name as communication reference.</p>
+            </div>''') 
         return post_msg
 
     def create(self, cr, uid, values, context=None):
