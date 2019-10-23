@@ -7,7 +7,11 @@
     'summary': 'Payment Acquirer: Paypal as a Friend Implementation',
     'version': '1.0',
     'description': """Paypal as a Friend Payment Acquirer
-    20191010 - It includes changing status in transaction payment when quotation is confirm manually
+    201910
+    It includes changing status in transaction payment when quotation is confirm/cancell/draft manually.
+    This changing will afect wire transfer and paypal as a friend payment acquirer and they need to select
+    'At payment with acquirer confirmation' option in Order Confirmation field in Payment Acquirer Configuration.
+
     """,
     'website': 'https://github.com/vandekul',
     'depends': ['payment', 'sale'],

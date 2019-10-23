@@ -25,7 +25,7 @@ class PaypalFriendPaymentAcquirer(osv.Model):
     def _format_transfer_data(self, cr, uid, context=None):
         company_id = self.pool['res.users'].browse(cr, uid, uid, context=context).company_id.id
         # filter only bank accounts marked as visible
-        post_msg = _('''<div>
+        pending_msg = _('''<div>
             <h3>Please use the following transfer details</h3>
             <h4>payment@zynthian.org</h4>
             (please, send the money as a friend/donation to avoid the fee)<br><br>
@@ -39,7 +39,7 @@ class PaypalFriendPaymentAcquirer(osv.Model):
         to have access to the name and other creation values. If no post_msg
         or a void post_msg is given at creation, generate a default one. """
         if values.get('provider') == 'paypal_friend' and not values.get('post_msg'):
-            values['post_msg'] = self._format_transfer_data(cr, uid, context=context)
+            values['pending_msg'] = self._format_transfer_data(cr, uid, context=context)
         return super(PaypalFriendPaymentAcquirer, self).create(cr, uid, values, context=context)
 
 
